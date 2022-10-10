@@ -2,3 +2,13 @@
     display: flex;
     flex-flow: $direction $wrap;
   }
+
+  @mixin important-text {
+    color: #211C20;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px #333D3B;
+  }
+
+
+  
