@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@300&display=swap');
+
+$fonts-headlines: "Courgette", cursive;
+$fonts-body: 'Oswald', sans-serif;
+$background-color: #DEECE3;
+$primary: #211C20;
+$accent1: #333D38;
+$accent2: #1b4442;
+$sidebar: #1E1E1F;
+
+@mixin outlined($bordercolor) {
+    margin: auto;
+    border: 3px solid $bordercolor;
+    width: 75%;
+    padding: 0 20px;
+    margin-top: -3px;
+}
+
+@mixin h3outline() {
+    width: 60%;
+    text-align: center;
+    padding: 10px;
+    background-color: $background-color;
+    border: 3px solid $accent2;
+}
+
+body {
+    font-family: $fonts-body;
+    color: $primary;
+}
+
+h1, h2, h3 {
+    font-family: $fonts-headlines;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h3 {
+    @include h3outline();
+    font-size: 22px;
+}
+
+header {
+    height: 200px;
+    background-image: url(./images/mountain.jpg);
+    background-color: $accent2;
+    background-size: cover;
+    background-position: bottom;
+    text-align: center;
+    border: 5px solid $accent2;
+    color: white;
+}
+
+.main div, .preamble {
+    position: relative;
+    h3 {
+        position: absolute;
+        top: -50px;
+        left: calc(25px + -16.5%);
+    }
+}
+
+
+
+.summary {
+    @include outlined($accent2);
+}
+
+.preamble, .main div {
+    @include outlined($background-color);
+    margin-top: 40px;
+    :nth-child(2) {
+        margin-top: 40px;
+    }
+}
