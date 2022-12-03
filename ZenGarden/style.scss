@@ -39,7 +39,8 @@ h1 {
 
 h3 {
     @include h3outline();
-    font-size: 22px;
+    font-size: min-max(auto, 22px);
+    max-height: min-content;
 }
 
 header {
@@ -55,23 +56,24 @@ header {
 
 .main div, .preamble {
     position: relative;
-    h3 {
-        position: absolute;
-        top: -50px;
-        left: calc(25px + -16.5%);
-    }
-}
-
-
-
-.summary {
-    @include outlined($accent2);
-}
-
-.preamble, .main div {
     @include outlined($background-color);
     margin-top: 40px;
     :nth-child(2) {
         margin-top: 40px;
     }
+
+    h3 {
+        position: absolute;
+        top: -45px;
+        right: calc(25px + -16.5%);
+    }
+    &:nth-of-type(2n) {
+        h3 {
+            left: calc(25px + -16.5%);
+        }
+    }
+}
+
+.summary {
+    @include outlined($accent2);
 }

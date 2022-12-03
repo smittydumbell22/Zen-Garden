@@ -18,7 +18,10 @@ h3 {
   padding: 10px;
   background-color: #DEECE3;
   border: 3px solid #1b4442;
-  font-size: 22px;
+  font-size: min-max(auto, 22px);
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
+  max-height: min-content;
 }
 
 header {
@@ -34,11 +37,25 @@ header {
 
 .main div, .preamble {
   position: relative;
+  margin: auto;
+  border: 3px solid #DEECE3;
+  width: 75%;
+  padding: 0 20px;
+  margin-top: -3px;
+  margin-top: 40px;
+}
+
+.main div :nth-child(2), .preamble :nth-child(2) {
+  margin-top: 40px;
 }
 
 .main div h3, .preamble h3 {
   position: absolute;
-  top: -50px;
+  top: -45px;
+  right: calc(25px + -16.5%);
+}
+
+.main div:nth-of-type(2n) h3, .preamble:nth-of-type(2n) h3 {
   left: calc(25px + -16.5%);
 }
 
@@ -48,18 +65,5 @@ header {
   width: 75%;
   padding: 0 20px;
   margin-top: -3px;
-}
-
-.preamble, .main div {
-  margin: auto;
-  border: 3px solid #DEECE3;
-  width: 75%;
-  padding: 0 20px;
-  margin-top: -3px;
-  margin-top: 40px;
-}
-
-.preamble :nth-child(2), .main div :nth-child(2) {
-  margin-top: 40px;
 }
 /*# sourceMappingURL=style.css.map */
