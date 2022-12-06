@@ -17,30 +17,31 @@ h3 {
   text-align: center;
   padding: 10px;
   background-color: #DEECE3;
-  border: 3px solid #1b4442;
+  border: 3px solid #3b2b38;
   font-size: min-max(auto, 22px);
   max-height: min-content;
 }
 
 header {
   height: 200px;
-  background-image: url(./images/mountain.jpg);
+  background-image: url(./images/pinecone1.avif);
   background-color: #1b4442;
   background-size: cover;
   background-position: bottom;
   text-align: center;
-  border: 5px solid #1b4442;
+  border: 5px solid #3b2b38;
   color: white;
 }
 
 .main div, .preamble {
   position: relative;
   margin: auto;
-  border: 3px solid #DEECE3;
+  border: 3px solid #3b2b38;
   width: 75%;
   padding: 0 20px;
   margin-top: -3px;
   margin-top: 40px;
+  background-image: url(./images/mountain2.avif);
 }
 .main div :nth-child(2), .preamble :nth-child(2) {
   margin-top: 40px;
@@ -65,10 +66,18 @@ header {
 
 .summary {
   margin: auto;
-  border: 3px solid #1b4442;
+  border: 3px solid#3b2b38;
   width: 75%;
   padding: 0 20px;
   margin-top: -3px;
+}
+
+.page-wrapper {
+  background-image: url(./images/trees.avif);
+}
+
+.summary {
+  background-image: url(./images/mountain2.avif);
 }
 
 @keyframes h3 {
