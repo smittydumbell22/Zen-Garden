@@ -19,8 +19,6 @@ h3 {
   background-color: #DEECE3;
   border: 3px solid #1b4442;
   font-size: min-max(auto, 22px);
-  max-height: -webkit-min-content;
-  max-height: -moz-min-content;
   max-height: min-content;
 }
 
@@ -44,19 +42,25 @@ header {
   margin-top: -3px;
   margin-top: 40px;
 }
-
 .main div :nth-child(2), .preamble :nth-child(2) {
   margin-top: 40px;
 }
-
 .main div h3, .preamble h3 {
   position: absolute;
   top: -45px;
-  right: calc(25px + -16.5%);
+  right: calc(25px - 16.5%);
 }
-
+.main div h3, .preamble h3 {
+  background-color: #DEECE3;
+  animation-name: h3;
+  animation-duration: 4s;
+  position: absolute;
+  top: -45px;
+  right: calc(25px - 16.5%);
+  animation-iteration-count: infinite;
+}
 .main div:nth-of-type(2n) h3, .preamble:nth-of-type(2n) h3 {
-  left: calc(25px + -16.5%);
+  left: calc(25px - 16.5%);
 }
 
 .summary {
@@ -66,4 +70,14 @@ header {
   padding: 0 20px;
   margin-top: -3px;
 }
+
+@keyframes h3 {
+  from {
+    background-color: #DEECE3;
+  }
+  to {
+    background-color: #1b4442;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
