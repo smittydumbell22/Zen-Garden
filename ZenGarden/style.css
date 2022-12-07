@@ -1,4 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@300&display=swap");
+@-webkit-keyframes h3 {
+  from {
+    background-color: #DEECE3;
+  }
+  50% {
+    background-color: #1b4442;
+    color: #211C20;
+  }
+  to {
+    background-color: #1b4442;
+    color: white;
+  }
+}
+@keyframes h3 {
+  from {
+    background-color: #DEECE3;
+  }
+  50% {
+    background-color: #1b4442;
+    color: #211C20;
+  }
+  to {
+    background-color: #1b4442;
+    color: white;
+  }
+}
+
 body {
   font-family: "Oswald", sans-serif;
   color: #211C20;
@@ -18,13 +45,29 @@ h3 {
   padding: 10px;
   background-color: #DEECE3;
   border: 3px solid #1b4442;
+  -webkit-animation-name: h3;
+          animation-name: h3;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   font-size: min-max(auto, 22px);
+  max-height: -webkit-min-content;
+  max-height: -moz-min-content;
   max-height: min-content;
+}
+
+a {
+  color: #333D38;
+}
+
+a:hover {
+  color: #DEECE3;
 }
 
 header {
   height: 200px;
-  background-image: url(./images/pinecone1.avif);
+  background-image: url("./images/mountain.jpg");
   background-color: #1b4442;
   background-size: cover;
   background-position: bottom;
@@ -41,27 +84,24 @@ header {
   padding: 0 20px;
   margin-top: -3px;
   margin-top: 40px;
-  background-image: url(./images/mountain2.avif);
 }
+
 .main div :nth-child(2), .preamble :nth-child(2) {
   margin-top: 40px;
 }
+
 .main div h3, .preamble h3 {
   position: absolute;
   top: -45px;
-  right: calc(25px - 16.5%);
-}
-.main div h3, .preamble h3 {
+  right: calc(25px + -16.5%);
   background-color: #DEECE3;
-  animation-name: h3;
-  animation-duration: 4s;
   position: absolute;
   top: -45px;
-  right: calc(25px - 16.5%);
-  animation-iteration-count: infinite;
+  right: calc(25px + -16.5%);
 }
+
 .main div:nth-of-type(2n) h3, .preamble:nth-of-type(2n) h3 {
-  left: calc(25px - 16.5%);
+  left: calc(25px + -16.5%);
 }
 
 .summary {
@@ -70,70 +110,5 @@ header {
   width: 75%;
   padding: 0 20px;
   margin-top: -3px;
-  background-image: url(./images/trees2.avif);
 }
-
-body{
-  font-family: "Open Sans", arial;
-  color:#fff;
-  font-weight:300;
-  background-image: url(./images/trees2.avif);
-  
-
-}
-
-.sidebar {
-  margin: 10px 0 0 57px;
-}
-
-.sidebar-wrap {
-  background-color: #000;
-  width: 50px;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.sidebar-menu {
-  height: 40vh;
-  width: 50px;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  align-items: center;
-
-}
-.sidebar-menu span {
-  color: #fff;
-  line-height: 42px;
-  font-size: 18px;
-  transform: rotate(270deg);
-}
-
-
-
-
-
-
-.banner {
-  background-image: url(./images/pinecone1.avif);
-}
-
-.page-wrapper .intro {
-  background-image: url(./images/trees2.avif);
-}
-
-
-
-
-@keyframes h3 {
-  from {
-    background-color: #DEECE3;
-  }
-  to {
-    background-color: #1b4442;
-  }
-}
-
 /*# sourceMappingURL=style.css.map */
