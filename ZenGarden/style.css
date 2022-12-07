@@ -41,6 +41,7 @@ h3 {
   border: 3px solid #1b4442;
   animation-name: h3;
   animation-duration: 4s;
+  animation-iteration-count: infinite;
   font-size: min-max(auto, 22px);
   max-height: min-content;
 }
