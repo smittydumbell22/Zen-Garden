@@ -25,7 +25,7 @@ $header-height: 200px;
 @mixin animateh3() {
     animation-name: h3;
     animation-duration: 4s;
-    animation-iteration-count: infinite;
+    // animation-iteration-count: infinite;
 }
 
 @keyframes h3 {
@@ -51,7 +51,7 @@ h1 {
 
 h3 {
     @include h3outline();
-    // @include animateh3();
+    @include animateh3();
     font-size: min-max(auto, 22px);
     max-height: min-content;
 }

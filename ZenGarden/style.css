@@ -45,6 +45,10 @@ h3 {
   padding: 10px;
   background-color: #DEECE3;
   border: 3px solid #1b4442;
+  -webkit-animation-name: h3;
+          animation-name: h3;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
   font-size: min-max(auto, 22px);
   max-height: -webkit-min-content;
   max-height: -moz-min-content;
