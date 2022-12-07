@@ -5,11 +5,11 @@
   }
   50% {
     background-color: #1b4442;
-    color: #211C20;
+    color: white;
   }
   to {
-    background-color: #1b4442;
-    color: white;
+    background-color: #DEECE3;
+    color: #211C20;
   }
 }
 @keyframes image {
@@ -39,11 +39,15 @@ h3 {
   padding: 10px;
   background-color: #DEECE3;
   border: 3px solid #1b4442;
-  animation-name: h3;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
   font-size: min-max(auto, 22px);
   max-height: min-content;
+}
+
+[role=article]:hover h3 {
+  scale: 1.1;
+  animation-name: h3;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
 }
 
 a {

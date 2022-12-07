@@ -24,16 +24,16 @@ $header-height: 200px;
 
 @mixin animateh3() {
     animation-name: h3;
-    animation-duration: 4s;
+    animation-duration: 8s;
     animation-iteration-count: infinite;
 }
 
 @keyframes h3 {
     from {background-color: $background-color;}
     50% {background-color: $accent2;
-        color: $primary;}
-    to {background-color: $accent2;
         color: white;}
+    to {background-color: $background-color;
+        color:$primary;}
 }
 
 @keyframes image {
@@ -60,9 +60,13 @@ h1 {
 
 h3 {
     @include h3outline();
-    @include animateh3();
     font-size: min-max(auto, 22px);
     max-height: min-content;
+}
+
+[role=article]:hover h3 {
+    scale: 1.1;
+    @include animateh3();
 }
 
 a {
