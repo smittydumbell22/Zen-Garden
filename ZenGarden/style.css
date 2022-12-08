@@ -185,6 +185,8 @@ footer a:first-of-type {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 210px calc(310px - 10vw) auto;
+    background-image: url("./images/fog2.jpg");
+    background-attachment: fixed;
   }
   .intro {
     display: grid;
