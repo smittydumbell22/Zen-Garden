@@ -88,9 +88,16 @@ header {
     animation: image 4s infinite alternate;
 }
 
+.page-wrapper {
+    background-image: url('./images/fog2.jpg');
+    background-attachment: fixed;
+    background-size: 100% 135%;  
+}
+
 .main div, .preamble {
     position: relative;
     @include outlined($background-color);
+    background-color:rgba(255, 255, 255, 0.5);
     width: 75%;
     padding: 0 20px;
     margin-top: 40px;
@@ -207,9 +214,7 @@ footer {
     .page-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        grid-template-rows: 210px calc(310px - 10vw) auto;
-        background-image: url('./images/fog2.jpg');
-        background-attachment: fixed;   
+        grid-template-rows: 210px calc(310px - 10vw) auto; 
     }
     
     .intro {
