@@ -7,6 +7,7 @@
 body {
     font-family: $fonts-body;
     color: $primary;
+    margin: 0px;
 }
 
 h1, h2, h3 {
@@ -50,7 +51,8 @@ header {
 .page-wrapper {
     background-image: url('./images/fog2.jpg');
     background-attachment: fixed;
-    background-size: 100% 135%;  
+    background-size: 100% 135%;
+    padding: 10px;
 }
 
 .main div, .preamble {
