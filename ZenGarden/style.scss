@@ -1,49 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Oswald:wght@300&display=swap');
+@import "variables";
+@import "mixins";
+@import "keyframes";
 
-$fonts-headlines: "Courgette", cursive;
-$fonts-body: 'Oswald', sans-serif;
-$background-color: #DEECE3;
-$primary: #211C20;
-$accent1: #333D38;
-$accent2: #1b4442;
-$sidebar: #1E1E1F;
-$header-height: 200px;
-
-@mixin outlined($bordercolor) {
-    margin: auto;
-    border: 3px solid $bordercolor;
-}
-
-@mixin h3outline() {
-    width: 75%;
-    text-align: center;
-    padding: 10px;
-    background-color: $background-color;
-    border: 3px solid $accent2;
-}
-
-@mixin animateh3() {
-    animation-name: h3;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes h3 {
-    from {background-color: $background-color;}
-    50% {background-color: $accent2;
-        color: white;}
-    to {background-color: $background-color;
-        color:$primary;}
-}
-
-@keyframes image {
-    0% {
-      background-image: url('./images/trees.avif');
-    }
-    100% {
-      background-image: url('./images/mountain.jpg');
-    }
-  }
 
 body {
     font-family: $fonts-body;
@@ -130,7 +89,6 @@ header {
 }
 
 footer {
-    @include outlined($accent1);
     background-color: $accent2;
     font-size: large;
     margin: 15px 0;
@@ -169,6 +127,7 @@ footer {
     padding: 0;
     
     li {
+        background-color:rgba(255, 255, 255, 0.5);
         margin: 20px;
         min-height: 70px;
         width: 75%;
@@ -190,7 +149,7 @@ footer {
     background-color: $background-color;
     margin: 15px 0;
     ul {
-        padding: 0;
+        padding: 0px 20px;
         display: flex;
         flex-wrap: wrap;
         text-align: center;
